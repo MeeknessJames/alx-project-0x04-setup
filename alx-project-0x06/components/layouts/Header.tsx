@@ -1,8 +1,8 @@
-import { useSelector } from 'react-redux'; // Import useSelector
-import type { RootState } from '../../redux/store';
+import { useSelector } from 'react-redux'; 
+import type { RootState } from '../../store/store';
 
 const Header = () => {
-  const count = useSelector((state: RootState) => state.counter.value); // Use useSelector to get the count
+  const count = useSelector((state: RootState) => state.counter.value);
 
   return (
     <header>
