@@ -1,22 +1,9 @@
-import { useSelector, useDispatch } from 'react-redux';
-import { increment, decrement } from '../store/counterSlice';
-import type { RootState, AppDispatch } from '../store/store';
-import Header from '@/components/layouts/Header';
+import { useDispatch } from 'react-redux';
+import type { AppDispatch } from '../store/store';
 
 const CounterApp = () => {
-  const count = useSelector((state: RootState) => state.counter.value);
-  const dispatch: AppDispatch = useDispatch(); 
-
-  return (
-    <div>
-      <Header />
-      <main>
-        <p>Current Count: {count}</p>
-        <button onClick={() => dispatch(increment())}>Increment</button>
-        <button onClick={() => dispatch(decrement())}>Decrement</button>
-      </main>
-    </div>
-  );
+  const dispatch: AppDispatch = useDispatch();
+  return null;
 };
 
 export default CounterApp;
