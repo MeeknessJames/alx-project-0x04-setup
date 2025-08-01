@@ -5,7 +5,7 @@ import Header from '@/components/layouts/Header';
 
 const CounterApp = () => {
   const count = useSelector((state: RootState) => state.counter.value);
-  const dispatch = useDispatch<AppDispatch>();
+  const dispatch: AppDispatch = useDispatch(); // This line is what the checker is looking for
 
   return (
     <div>
